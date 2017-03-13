@@ -70,14 +70,12 @@ class vinylcontrol: public flext_dsp {
                 void m_setVinylType(int argc, t_atom *argv){
                     if (argc == 0) return;
                     const char * vinylType = GetString(argv[0]);
-                    post("set vinyl type to %s", vinylType);
                     if(timecoder_build_lookup((char*)vinylType) == -1) {
                         post("Error building lookup: You may have given an unknown vinyl-type as parameter.");
                     }
                 };
 
                 void m_setSmoothing(int i){
-                    post("set smoothing to %d", i);
                     smoothingIterations = i;
                 }
 
