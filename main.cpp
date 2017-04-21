@@ -141,7 +141,7 @@ void vinylcontrol::m_output_values() {
 
             if((currentTimecode = timecoder_get_position(&tc, NULL)) != -1) {
                 if(firstTimecode == 0) {
-                    firstTimecode = currentTimecode;
+                    // firstTimecode = currentTimecode;
                 }
                 ToOutFloat(2, (((float)(currentTimecode-firstTimecode))/float(lastTimecode-firstTimecode)));
             }
